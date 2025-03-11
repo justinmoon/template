@@ -1,0 +1,16 @@
+[template]
+ignore = ["target", ".git"]
+
+# FIXME: I can't fetch this variable in platform.rhai
+# [placeholders.platforms]
+# type = "array"
+# prompt = "Include which platforms?"
+# choices = ["SwiftUI", "Jetpack Compose"]
+# default = ["SwiftUI", "Jetpack Compose"]
+
+[placeholders]
+include_ios = { type = "bool", prompt = "Include iOS?", default = true }
+include_android = { type = "bool", prompt = "Include Android?", default = true }
+
+[hooks]
+pre = ["platform.rhai"]

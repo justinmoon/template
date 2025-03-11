@@ -13,4 +13,4 @@ include_ios = { type = "bool", prompt = "Include iOS?", default = true }
 include_android = { type = "bool", prompt = "Include Android?", default = true }
 
 [hooks]
-pre = ["platform.rhai"]
+pre = ["platform.rhai", "more_vars.rhai"]

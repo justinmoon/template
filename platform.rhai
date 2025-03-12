@@ -19,9 +19,10 @@ if (include_android) {
     // let bundle_id_pattern = r"^[a-zA-Z]+(\\.[a-zA-Z0-9_]+)+$";
 
     // Prompt the user for the bundle ID with validation
+    let project_name = variable::get("project-name");
     let bundle_id = variable::prompt(
-        "Enter the Android bundle ID (e.g., com.example.app):",
-        "com.example.app",
+        "Enter the Android bundle ID:",
+        `com.rust-multiplatform.${project_name}`,
         // bundle_id_pattern
     );
 
